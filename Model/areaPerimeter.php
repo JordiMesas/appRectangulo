@@ -1,55 +1,41 @@
 <?php
 
-Class Perimeter{
-    private $base;
-    private $altura;
-    public function __construct($base , $altura){
-        $this->base = $base;
-        $this->altura = $altura;
+Class perimeterArea{
+    private $radio;
+   
+    public function __construct($radio){
+        $this->radio = $radio;        
     }
 
     //getters
 
-    public function getBase()
+    public function getRadio()
     {
-        return $this->base;
-    }
-       
-    public function getAltura()
-    {
-        return $this->altura;
-    }
+        return $this->radio;
+    }         
 
     //setters
 
-    public function setBase($base)
+    public function setRadio($radio)
     {
-        $this->base = $base;
+        $this->radio = $radio;
 
         return $this;
-    }
- 
-    public function setAltura($altura)
-    {
-        $this->altura = $altura;
-
-        return $this;
-    }
+    }   
 
     // own function 
     
     //Rectangulo
 
-    public function areaRectangulo(){
-        $area= ($this->base * $this->altura);        
-        return $area;
+    public function areaCirculo(){
+        $area= ((pow($this->radio, 2)) * pi());        
+        return round($area);
     }
 
-    public function CalculatePerimeterRectangulo(){
-        $b = $this->base;
-        $a =  $this->altura;
-        $resultR = 2 * ($b + $a);
-        return $resultR;
+    public function CalculatePerimeterCirculo(){
+        $r = $this->radio;        
+        $result = 2 * pi() * $r;
+        return round($result);
     }
 
 }
