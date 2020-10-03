@@ -1,19 +1,21 @@
 <?php
-
 require_once '../Model/areaPerimeter.php';
 
 
-$radio = $_POST['radio'];
+$base = $_POST['base'];
+$altura = $_POST['altura'];
+
+$resultPerimeter = new perimeterArea($base,$altura);
+
+echo $resultPerimeter->getBase() ."<br>";
+
+echo $resultPerimeter->getAltura(). "<br>";
 
 
-$resultPerimeterArea = new perimeterArea($radio);
+echo "resultado de rectangulo <br>";
 
-echo $resultPerimeterArea->getRadio() ." de radio <br>";
+echo "Area ".$resultPerimeter->areaRectangulo() ."<br>";
 
-echo "resultado de Circulo <br>";
-
-echo "Area ".$resultPerimeterArea->areaCirculo() ."<br>";
-
-echo "Perimetro ". $resultPerimeterArea->CalculatePerimeterCirculo();
+echo "Perimetro ". $resultPerimeter->CalculatePerimeterRectangulo();
 
 
