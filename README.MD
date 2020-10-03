@@ -1,1 +1,1 @@
-# Area y perimetro de un rectangulo
+# Area y perimetro de un circulo
