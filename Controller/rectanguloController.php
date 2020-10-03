@@ -1,12 +1,12 @@
 <?php
 
-require_once '../Model/areaPerimeter.php';
+require_once '../Model/rectangulo.php';
 
 
 $base = $_POST['base'];
 $altura = $_POST['altura'];
 
-$resultPerimeter = new Perimeter($base,$altura);
+$resultPerimeter = new Rectangulo($base,$altura);
 
 echo $resultPerimeter->getBase() ."<br>";
 

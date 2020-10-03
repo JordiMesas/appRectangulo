@@ -1,13 +1,12 @@
 <?php
 
-Class Perimeter{
+class Rectangulo {
     private $base;
     private $altura;
     public function __construct($base , $altura){
         $this->base = $base;
         $this->altura = $altura;
     }
-
     //getters
 
     public function getBase()
@@ -52,4 +51,10 @@ Class Perimeter{
         return $resultR;
     }
 
+    public function area(){
+        $area= ($this->base * $this->altura);        
+        echo $area;
+    }
+
 }
+
